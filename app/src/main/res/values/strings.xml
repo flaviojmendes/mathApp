@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Kids Math</string>
+    <string name="sum_signal">+</string>
+    <string name="subtraction_signal">-</string>
+    <string name="multiplication_signal">x</string>
+    <string name="division_signal">%</string>
+    <string name="zero">0</string>
+    <string name="quanto_e">How much is</string>
+    <string name="resultado">Result</string>
+
+
+    <string name="right">You got!</string>
+    <string name="wrong">You miss!</string>
+    <string name="rights">Hits:&#032;</string>
+    <string name="wrongs">Misses:&#032;</string>
+
+
+</resources>

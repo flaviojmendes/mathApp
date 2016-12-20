@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!-- 500 -->
+    <color name="sumMainColor">#6BC0AE</color>
+    <color name="subtractionMainColor">#CD5B5D</color>
+    <color name="multiplicationMainColor">#4E5E71</color>
+    <color name="divisionMainColor">#E69663</color>
+
+
+    <!-- 900 -->
+    <color name="sum_calculation_background">#369380</color>
+    <color name="subtraction_calculation_background">#c74548</color>
+    <color name="multiplication_calculation_background">#415873</color>
+    <color name="division_calculation_background">#e28346</color>
+
+    <!-- darker -->
+    <color name="result_sum">#1c6456</color>
+    <color name="result_subtraction">#872426</color>
+    <color name="result_multiplication">#2d4159</color>
+    <color name="result_division">#9c5528</color>
+
+
+    <color name="result_background">#2fffffff</color>
+</resources>

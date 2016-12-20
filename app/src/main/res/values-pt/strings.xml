@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Matemática</string>
+    <string name="sum_signal">+</string>
+    <string name="subtraction_signal">-</string>
+    <string name="multiplication_signal">x</string>
+    <string name="division_signal">%</string>
+    <string name="zero">0</string>
+    <string name="quanto_e">Quanto é</string>
+    <string name="resultado">Resultado</string>
+
+
+    <string name="right">Acertou!</string>
+    <string name="wrong">Errou!</string>
+    <string name="rights">Acertos:&#032;</string>
+    <string name="wrongs">Erros:&#032;</string>
+
+
+</resources>
