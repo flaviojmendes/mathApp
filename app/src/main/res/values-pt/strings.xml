@@ -13,6 +13,7 @@
     <string name="wrong">Errou!</string>
     <string name="rights">Acertos:&#032;</string>
     <string name="wrongs">Erros:&#032;</string>
+    <string name="pontuation">Pontos:&#032;</string>
 
 
 </resources>

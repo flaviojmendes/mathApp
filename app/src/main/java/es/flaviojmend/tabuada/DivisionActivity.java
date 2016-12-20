@@ -31,6 +31,7 @@ public class DivisionActivity extends AppCompatActivity implements View.OnClickL
 
     HandwrittenTextView rights;
     HandwrittenTextView wrongs;
+    HandwrittenTextView pontuation;
 
     private RelativeLayout result1;
     private RelativeLayout result2;
@@ -56,11 +57,11 @@ public class DivisionActivity extends AppCompatActivity implements View.OnClickL
 
         this.rights = (HandwrittenTextView) findViewById(R.id.rights);
         this.wrongs = (HandwrittenTextView) findViewById(R.id.wrongs);
+        this.pontuation = (HandwrittenTextView) findViewById(R.id.pontuation);
 
         rights.setText(preferences.getInt(PontuationModel.divisionsRight, 0)+"");
         wrongs.setText(preferences.getInt(PontuationModel.divisionsWrong, 0)+"");
-
-
+        pontuation.setText((preferences.getInt(PontuationModel.divisionsWrong, 0) - preferences.getInt(PontuationModel.divisionsWrong, 0))+"");
 
 
         num1 = ThreadLocalRandom.current().nextInt(MIN_LIMIT, MAX_LIMIT);
