@@ -40,6 +40,26 @@
                 android:textColor="@android:color/white"
                 android:text="@string/zero"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <es.flaviojmend.tabuada.components.HandwrittenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pontuation"
+                android:textSize="@dimen/pontuation_size"
+                android:textColor="@android:color/white"/>
+            <es.flaviojmend.tabuada.components.HandwrittenTextView
+                android:id="@+id/pontuation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/pontuation_size"
+                android:textColor="@android:color/white"
+                android:text="@string/zero"/>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
