@@ -14,3 +14,8 @@ With a ranking of hits and misses you can follow and give feedback about your ki
 <img src="readmeFiles/subtraction.png" alt="" width="150"/>
 <img src="readmeFiles/multiplication.png" alt="" width="150"/>
 <img src="readmeFiles/division.png" alt="" width="150"/>
+
+
+** Google Play: **
+
+https://play.google.com/store/apps/details?id=es.flaviojmend.tabuada
