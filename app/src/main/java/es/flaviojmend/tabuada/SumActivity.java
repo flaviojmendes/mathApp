@@ -33,6 +33,7 @@ public class SumActivity extends AppCompatActivity implements View.OnClickListen
 
     HandwrittenTextView rights;
     HandwrittenTextView wrongs;
+    HandwrittenTextView pontuation;
 
     private RelativeLayout result1;
     private RelativeLayout result2;
@@ -58,9 +59,11 @@ public class SumActivity extends AppCompatActivity implements View.OnClickListen
 
         this.rights = (HandwrittenTextView) findViewById(R.id.rights);
         this.wrongs = (HandwrittenTextView) findViewById(R.id.wrongs);
+        this.pontuation = (HandwrittenTextView) findViewById(R.id.pontuation);
 
         rights.setText(preferences.getInt(PontuationModel.sumsRight, 0)+"");
         wrongs.setText(preferences.getInt(PontuationModel.sumsWrong, 0)+"");
+        pontuation.setText((preferences.getInt(PontuationModel.sumsRight, 0) - preferences.getInt(PontuationModel.sumsWrong, 0))+"");
 
 
 

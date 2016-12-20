@@ -13,6 +13,6 @@
     <string name="wrong">You miss!</string>
     <string name="rights">Hits:&#032;</string>
     <string name="wrongs">Misses:&#032;</string>
-
+    <string name="pontuation">Points:&#032;</string>
 
 </resources>

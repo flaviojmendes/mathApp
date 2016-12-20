@@ -31,6 +31,7 @@ public class SubtractionActivity extends AppCompatActivity implements View.OnCli
 
     HandwrittenTextView rights;
     HandwrittenTextView wrongs;
+    HandwrittenTextView pontuation;
 
     private RelativeLayout result1;
     private RelativeLayout result2;
@@ -56,9 +57,11 @@ public class SubtractionActivity extends AppCompatActivity implements View.OnCli
 
         this.rights = (HandwrittenTextView) findViewById(R.id.rights);
         this.wrongs = (HandwrittenTextView) findViewById(R.id.wrongs);
+        this.pontuation = (HandwrittenTextView) findViewById(R.id.pontuation);
 
         rights.setText(preferences.getInt(PontuationModel.subtractionsRight, 0)+"");
         wrongs.setText(preferences.getInt(PontuationModel.subtractionsWrong, 0)+"");
+        pontuation.setText((preferences.getInt(PontuationModel.subtractionsRight, 0) - preferences.getInt(PontuationModel.subtractionsWrong, 0))+"");
 
 
 

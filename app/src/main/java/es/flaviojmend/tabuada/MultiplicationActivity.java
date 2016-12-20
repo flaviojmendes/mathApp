@@ -31,6 +31,7 @@ public class MultiplicationActivity extends AppCompatActivity implements View.On
 
     HandwrittenTextView rights;
     HandwrittenTextView wrongs;
+    HandwrittenTextView pontuation;
 
     private RelativeLayout result1;
     private RelativeLayout result2;
@@ -56,10 +57,11 @@ public class MultiplicationActivity extends AppCompatActivity implements View.On
 
         this.rights = (HandwrittenTextView) findViewById(R.id.rights);
         this.wrongs = (HandwrittenTextView) findViewById(R.id.wrongs);
+        this.pontuation = (HandwrittenTextView) findViewById(R.id.pontuation);
 
         rights.setText(preferences.getInt(PontuationModel.multiplicationsRight, 0)+"");
         wrongs.setText(preferences.getInt(PontuationModel.multiplicationsWrong, 0)+"");
-
+        pontuation.setText((preferences.getInt(PontuationModel.multiplicationsRight, 0) - preferences.getInt(PontuationModel.multiplicationsWrong, 0))+"");
 
 
 
