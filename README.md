@@ -9,8 +9,8 @@ With a ranking of hits and misses you can follow and give feedback about your ki
 
 **Screenshots:**
 
-<img src="readmeFiles/main.png" alt="" style="width: 150px;"/>
-<img src="readmeFiles/sum.png" alt="" style="width: 150px;"/>
-<img src="readmeFiles/subtraction.png" alt="" style="width: 150px;"/>
-<img src="readmeFiles/multiplication.png" alt="" style="width: 150px;"/>
-<img src="readmeFiles/division.png" alt="" style="width: 150px;"/>
+<img src="readmeFiles/main.png" alt="" width="150"/>
+<img src="readmeFiles/sum.png" alt="" width="150"/>
+<img src="readmeFiles/subtraction.png" alt="" width="150"/>
+<img src="readmeFiles/multiplication.png" alt="" width="150"/>
+<img src="readmeFiles/division.png" alt="" width="150"/>
