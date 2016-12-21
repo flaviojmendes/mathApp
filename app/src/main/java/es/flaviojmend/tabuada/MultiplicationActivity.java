@@ -187,8 +187,7 @@ public class MultiplicationActivity extends AppCompatActivity implements View.On
             editor.putInt(PontuationModel.multiplicationsWrong, multiplicationsWrong);
             editor.apply();
         }
-        resultPopup.setVisibility(View.VISIBLE);
-
+        animate();
         new Timer().schedule(new TimerTask(){
             public void run() {
                 MultiplicationActivity.this.runOnUiThread(new Runnable() {
@@ -199,5 +198,16 @@ public class MultiplicationActivity extends AppCompatActivity implements View.On
                 });
             }
         }, 2000);
+    }
+
+    private void animate() {
+        resultPopup.setVisibility(View.VISIBLE);
+        // Prepare the View for the animation
+        resultPopup.setVisibility(View.VISIBLE);
+        resultPopup.setAlpha(0.0f);
+        // Start the animation
+        resultPopup.animate()
+                .translationY(resultPopup.getHeight())
+                .alpha(1.0f);
     }
 }

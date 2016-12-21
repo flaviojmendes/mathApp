@@ -193,8 +193,7 @@ public class DivisionActivity extends AppCompatActivity implements View.OnClickL
             editor.putInt(PontuationModel.divisionsWrong, divisionsWrong);
             editor.apply();
         }
-        resultPopup.setVisibility(View.VISIBLE);
-
+        animate();
         new Timer().schedule(new TimerTask(){
             public void run() {
                 DivisionActivity.this.runOnUiThread(new Runnable() {
@@ -207,6 +206,17 @@ public class DivisionActivity extends AppCompatActivity implements View.OnClickL
         }, 2000);
 
 
+    }
+
+    private void animate() {
+        resultPopup.setVisibility(View.VISIBLE);
+        // Prepare the View for the animation
+        resultPopup.setVisibility(View.VISIBLE);
+        resultPopup.setAlpha(0.0f);
+        // Start the animation
+        resultPopup.animate()
+                .translationY(resultPopup.getHeight())
+                .alpha(1.0f);
     }
 
 }
