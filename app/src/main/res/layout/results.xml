@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/results"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="150dp"
+    android:columnCount="2"
+    android:rowCount="2"
+    android:layout_marginBottom="@dimen/results_margin_bottom"
+    android:layout_alignParentBottom="true"
+    tools:showIn="@layout/activity_division">
+
+
+    <RelativeLayout
+        android:id="@+id/result1"
+        android:background="@drawable/rounded_corner"
+        android:layout_margin="@dimen/result_margin"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1">
+
+        <es.flaviojmend.tabuada.components.HandwrittenTextView
+            android:id="@+id/result1Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/results_numbers_size"
+            android:layout_marginRight="@dimen/numbers_margin"
+            android:text="@string/zero" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/result2"
+        android:background="@drawable/rounded_corner"
+        android:layout_margin="@dimen/result_margin"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1">
+
+        <es.flaviojmend.tabuada.components.HandwrittenTextView
+            android:id="@+id/result2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/results_numbers_size"
+            android:layout_marginRight="@dimen/numbers_margin"
+            android:text="@string/zero" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/result3"
+        android:background="@drawable/rounded_corner"
+        android:layout_margin="@dimen/result_margin"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1">
+
+        <es.flaviojmend.tabuada.components.HandwrittenTextView
+            android:id="@+id/result3Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/results_numbers_size"
+            android:layout_marginRight="@dimen/numbers_margin"
+            android:text="@string/zero" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/result4"
+        android:background="@drawable/rounded_corner"
+        android:layout_margin="@dimen/result_margin"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1">
+
+        <es.flaviojmend.tabuada.components.HandwrittenTextView
+            android:id="@+id/result4Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/results_numbers_size"
+            android:layout_marginRight="@dimen/numbers_margin"
+            android:text="@string/zero" />
+    </RelativeLayout>
+
+</GridLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<es.flaviojmend.tabuada.components.HandwrittenTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quanto_e"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/title_size"
+    android:layout_marginTop="@dimen/how_much_margin_top"
+    android:textColor="@android:color/white"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:text="@string/quanto_e"
+    tools:showIn="@layout/activity_multiplication" />

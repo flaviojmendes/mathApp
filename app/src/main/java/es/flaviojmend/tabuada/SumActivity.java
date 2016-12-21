@@ -12,6 +12,8 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.ThreadLocalRandom;
 
 import es.flaviojmend.tabuada.components.HandwrittenTextView;
@@ -52,6 +54,7 @@ public class SumActivity extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sum);
 
+        setSignalParams();
         this.num1Text = (HandwrittenTextView) findViewById(R.id.num1);
         this.num2Text = (HandwrittenTextView) findViewById(R.id.num2);
 
@@ -97,6 +100,11 @@ public class SumActivity extends AppCompatActivity implements View.OnClickListen
 
 
 
+    }
+
+    private void setSignalParams() {
+        ((HandwrittenTextView) findViewById(R.id.signal)).setText(getString(R.string.sum_signal));
+        ((HandwrittenTextView) findViewById(R.id.signal)).setTextColor(getColor(R.color.sumMainColor));
     }
 
     private void populateResults() {
@@ -185,5 +193,16 @@ public class SumActivity extends AppCompatActivity implements View.OnClickListen
             editor.apply();
         }
         resultPopup.setVisibility(View.VISIBLE);
+
+        new Timer().schedule(new TimerTask(){
+            public void run() {
+                SumActivity.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        Intent intentNext = new Intent(SumActivity.this, SumActivity.class);
+                        startActivity(intentNext);
+                    }
+                });
+            }
+        }, 2000);
     }
 }

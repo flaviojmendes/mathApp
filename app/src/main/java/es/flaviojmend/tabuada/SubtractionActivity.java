@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.ThreadLocalRandom;
 
 import es.flaviojmend.tabuada.components.HandwrittenTextView;
@@ -50,6 +52,7 @@ public class SubtractionActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subtraction);
 
+        setSignalParams();
         this.num1Text = (HandwrittenTextView) findViewById(R.id.num1);
         this.num2Text = (HandwrittenTextView) findViewById(R.id.num2);
 
@@ -95,6 +98,11 @@ public class SubtractionActivity extends AppCompatActivity implements View.OnCli
 
 
 
+    }
+
+    private void setSignalParams() {
+        ((HandwrittenTextView) findViewById(R.id.signal)).setText(getString(R.string.subtraction_signal));
+        ((HandwrittenTextView) findViewById(R.id.signal)).setTextColor(getColor(R.color.subtractionMainColor));
     }
 
     private void populateResults() {
@@ -183,5 +191,16 @@ public class SubtractionActivity extends AppCompatActivity implements View.OnCli
             editor.apply();
         }
         resultPopup.setVisibility(View.VISIBLE);
+
+        new Timer().schedule(new TimerTask(){
+            public void run() {
+                SubtractionActivity.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        Intent intentNext = new Intent(SubtractionActivity.this, SubtractionActivity.class);
+                        startActivity(intentNext);
+                    }
+                });
+            }
+        }, 2000);
     }
 }
