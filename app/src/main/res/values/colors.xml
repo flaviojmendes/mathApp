@@ -25,5 +25,7 @@
     <color name="result_division">#9c5528</color>
 
 
+    <color name="top_bar">#F9CC8C</color>
+
     <color name="result_background">#2fffffff</color>
 </resources>

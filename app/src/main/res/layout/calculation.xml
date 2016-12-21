@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="180dp"
+    android:paddingTop="@dimen/calculation_padding"
+    android:paddingBottom="@dimen/calculation_padding"
+    android:background="@color/top_bar"
+    tools:showIn="@layout/activity_multiplication">
+
+    <es.flaviojmend.tabuada.components.HandwrittenTextView
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/numbers_size"
+        android:layout_marginLeft="@dimen/numbers_margin"
+        android:elevation="2dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2.5"
+        android:shadowDy="2.3"
+        android:shadowRadius="1.6"
+        android:text="@string/zero" />
+
+
+    <es.flaviojmend.tabuada.components.HandwrittenTextView
+        android:id="@+id/signal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:textSize="@dimen/signals_size"
+        android:shadowColor="#000000"
+        android:shadowDx="2.5"
+        android:shadowDy="2.3"
+        android:shadowRadius="1.6"
+        android:text="@string/multiplication_signal" />
+
+
+    <es.flaviojmend.tabuada.components.HandwrittenTextView
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/numbers_size"
+        android:layout_marginRight="@dimen/numbers_margin"
+        android:shadowColor="#000000"
+        android:shadowDx="2.5"
+        android:shadowDy="2.3"
+        android:shadowRadius="1.6"
+        android:text="@string/zero" />
+
+</RelativeLayout>

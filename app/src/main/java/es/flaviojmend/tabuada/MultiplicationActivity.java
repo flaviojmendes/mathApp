@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.ThreadLocalRandom;
 
 import es.flaviojmend.tabuada.components.HandwrittenTextView;
@@ -27,7 +29,6 @@ public class MultiplicationActivity extends AppCompatActivity implements View.On
 
     HandwrittenTextView num1Text;
     HandwrittenTextView num2Text;
-
 
     HandwrittenTextView rights;
     HandwrittenTextView wrongs;
@@ -49,6 +50,9 @@ public class MultiplicationActivity extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplication);
+
+        setSignalParams();
+
 
         this.num1Text = (HandwrittenTextView) findViewById(R.id.num1);
         this.num2Text = (HandwrittenTextView) findViewById(R.id.num2);
@@ -92,8 +96,10 @@ public class MultiplicationActivity extends AppCompatActivity implements View.On
 
         populateResults();
 
-
-
+    }
+    private void setSignalParams() {
+        ((HandwrittenTextView) findViewById(R.id.signal)).setText(getString(R.string.multiplication_signal));
+        ((HandwrittenTextView) findViewById(R.id.signal)).setTextColor(getColor(R.color.multiplicationMainColor));
     }
 
     private void populateResults() {
@@ -182,5 +188,16 @@ public class MultiplicationActivity extends AppCompatActivity implements View.On
             editor.apply();
         }
         resultPopup.setVisibility(View.VISIBLE);
+
+        new Timer().schedule(new TimerTask(){
+            public void run() {
+                MultiplicationActivity.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        Intent intentNext = new Intent(MultiplicationActivity.this, MultiplicationActivity.class);
+                        startActivity(intentNext);
+                    }
+                });
+            }
+        }, 2000);
     }
 }

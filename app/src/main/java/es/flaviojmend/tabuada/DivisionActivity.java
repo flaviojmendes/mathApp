@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.ThreadLocalRandom;
 
 import es.flaviojmend.tabuada.components.HandwrittenTextView;
@@ -50,6 +52,7 @@ public class DivisionActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_division);
 
+        setSignalParams();
         this.num1Text = (HandwrittenTextView) findViewById(R.id.num1);
         this.num2Text = (HandwrittenTextView) findViewById(R.id.num2);
 
@@ -61,7 +64,7 @@ public class DivisionActivity extends AppCompatActivity implements View.OnClickL
 
         rights.setText(preferences.getInt(PontuationModel.divisionsRight, 0)+"");
         wrongs.setText(preferences.getInt(PontuationModel.divisionsWrong, 0)+"");
-        pontuation.setText((preferences.getInt(PontuationModel.divisionsWrong, 0) - preferences.getInt(PontuationModel.divisionsWrong, 0))+"");
+        pontuation.setText((preferences.getInt(PontuationModel.divisionsRight, 0) - preferences.getInt(PontuationModel.divisionsWrong, 0))+"");
 
 
         num1 = ThreadLocalRandom.current().nextInt(MIN_LIMIT, MAX_LIMIT);
@@ -98,6 +101,11 @@ public class DivisionActivity extends AppCompatActivity implements View.OnClickL
 
 
 
+    }
+
+    private void setSignalParams() {
+        ((HandwrittenTextView) findViewById(R.id.signal)).setText(getString(R.string.division_signal));
+        ((HandwrittenTextView) findViewById(R.id.signal)).setTextColor(getColor(R.color.divisionMainColor));
     }
 
     private void populateResults() {
@@ -186,5 +194,19 @@ public class DivisionActivity extends AppCompatActivity implements View.OnClickL
             editor.apply();
         }
         resultPopup.setVisibility(View.VISIBLE);
+
+        new Timer().schedule(new TimerTask(){
+            public void run() {
+                DivisionActivity.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        Intent intentNext = new Intent(DivisionActivity.this, DivisionActivity.class);
+                        startActivity(intentNext);
+                    }
+                });
+            }
+        }, 2000);
+
+
     }
+
 }
