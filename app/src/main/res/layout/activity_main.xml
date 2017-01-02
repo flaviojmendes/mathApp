@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:grid="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -8,89 +8,99 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-
-    android:columnCount="2"
-    android:rowCount="2"
-
+    android:orientation="vertical"
     tools:context="es.flaviojmend.tabuada.MainActivity">
 
-
-    <RelativeLayout android:id="@+id/sumLayout"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:background="@color/sumMainColor"
-        android:clickable="true"
-        >
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <es.flaviojmend.tabuada.components.HandwrittenTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/sum_signal"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/main_signal_size"/>
+        <RelativeLayout android:id="@+id/sumLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/sumMainColor"
+            android:clickable="true"
+            >
+
+            <es.flaviojmend.tabuada.components.HandwrittenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/sum_signal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/main_signal_size"/>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-    <RelativeLayout android:id="@+id/subtractionLayout"
-        android:layout_width="0dp"
+        <RelativeLayout android:id="@+id/subtractionLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/subtractionMainColor"
+            android:clickable="true"
+            android:layout_column="1"
+            android:layout_row="0"
+            >
+
+            <es.flaviojmend.tabuada.components.HandwrittenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/subtraction_signal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/main_signal_size"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:background="@color/subtractionMainColor"
-        android:clickable="true"
-        >
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <RelativeLayout android:id="@+id/multiplyLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/multiplicationMainColor"
+            android:clickable="true"
+            android:layout_column="0"
+            android:layout_row="1"
+            >
 
-        <es.flaviojmend.tabuada.components.HandwrittenTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/subtraction_signal"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/main_signal_size"/>
+            <es.flaviojmend.tabuada.components.HandwrittenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/multiplication_signal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/main_signal_size"/>
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-    <RelativeLayout android:id="@+id/multiplyLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:background="@color/multiplicationMainColor"
-        android:clickable="true"
-        >
+        <RelativeLayout android:id="@+id/divisionLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/divisionMainColor"
+            android:clickable="true"
+            android:layout_column="1"
+            android:layout_row="1"
+            >
 
-        <es.flaviojmend.tabuada.components.HandwrittenTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/multiplication_signal"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/main_signal_size"/>
+            <es.flaviojmend.tabuada.components.HandwrittenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/division_signal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/main_signal_size"/>
 
-    </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout android:id="@+id/divisionLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:background="@color/divisionMainColor"
-        android:clickable="true"
-        >
-
-        <es.flaviojmend.tabuada.components.HandwrittenTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/division_signal"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/main_signal_size"/>
-
-    </RelativeLayout>
-
-
-</GridLayout>
+</LinearLayout>
